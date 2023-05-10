@@ -1,0 +1,52 @@
+.container__body {
+    width: 100%;
+    height: auto;
+}
+
+.container__profile {
+    width: 80%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.container__title{
+    display: flex;
+}
+
+.container__title__item{
+    margin-right: 16px;
+}
+
+.container__profile__title {
+    width: fit-content;
+    height: auto;
+    padding: 10px 15px;
+    margin: 0 0 18px 0;
+    background-color: #397224;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container__profile__title:hover{
+    color: white;
+}
+
+.option__posts {
+    color: #72af5c;
+    margin: 0 4px;
+}
+
+.option__posts:hover {
+    color: #397224;
+}
+
+.table__profile{
+    margin-top: 20px;
+}
+
+.info__order__table{
+    margin-top: 30px;
+}

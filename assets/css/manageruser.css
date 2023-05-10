@@ -1,0 +1,35 @@
+.user__new__title{
+    text-align: center;
+}
+.user__new{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: solid 1px #72af5c;
+}
+.add__user{
+    margin: 50px auto;
+}
+.btn__add__user{
+    width: fit-content;
+    height: auto;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #72af5c;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+}
+.title__fixuser{
+    width: fit-content;
+    height: auto;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #198754;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+}

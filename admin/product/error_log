@@ -1,0 +1,27 @@
+[17-Dec-2022 23:02:30 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: quantity in /home/botstore/public_html/admin/product/addProducts.php on line 94
+[17-Dec-2022 23:41:57 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[17-Dec-2022 23:41:57 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(assets/img/bg5.png): failed to open stream: No such file or directory in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[17-Dec-2022 23:41:57 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnwCqqQ' to 'assets/img/bg5.png' in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[17-Dec-2022 23:42:45 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[17-Dec-2022 23:42:45 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(assets/img/bg6.jpg): failed to open stream: No such file or directory in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[17-Dec-2022 23:42:45 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpONqqcp' to 'assets/img/bg6.jpg' in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[17-Dec-2022 23:48:33 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[17-Dec-2022 23:48:33 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(assets/img/bg6.jpg): failed to open stream: No such file or directory in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[17-Dec-2022 23:48:33 Asia/Ho_Chi_Minh] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phphGQuWD' to 'assets/img/bg6.jpg' in /home/botstore/public_html/admin/product/productProcess.php on line 33
+[18-Dec-2022 00:08:11 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[18-Dec-2022 00:08:34 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[18-Dec-2022 12:08:41 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:09:27 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:09:32 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:10:13 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[18-Dec-2022 12:12:01 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:12:44 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:13:35 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:14:21 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[18-Dec-2022 12:14:27 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[18-Dec-2022 12:15:43 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:16:29 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:17:08 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[18-Dec-2022 12:18:16 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 18
+[02-Jan-2023 16:39:13 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
+[02-Jan-2023 16:41:12 Asia/Ho_Chi_Minh] PHP Notice:  Only variables should be passed by reference in /home/botstore/public_html/admin/product/productProcess.php on line 55
