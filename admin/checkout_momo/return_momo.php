@@ -114,12 +114,18 @@ partnerCode=MOMOBKUN20180529
         <?php
         unset($_SESSION['cart']);
         header("Refresh: 5; URL=../../order_info.php");
-        echo "You will be redirected to the new page in 5 seconds. If not, click .";
+        echo "Bạn sẽ được chuyển hướng sau <p id='countdown'></p>. Nếu không hãy bấm  .";
         ?>
         <a href="../../order_info.php"><button class="btn btn-success mb-3">QUAY LẠI</button></a>
     </div>
-
-
+    <script type="text/javascript">
+        var seconds = 5;
+        var countdown = setInterval(function() {
+            var countdownElement = document.getElementById("countdown");
+            countdownElement.innerHTML = seconds + " seconds remaining...";
+            seconds--;
+        }, 1000);
+    </script>
 </body>
 
 </html>
