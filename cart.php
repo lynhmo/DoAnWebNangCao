@@ -99,8 +99,8 @@ if (!empty($_SESSION['cart'])) {
                                     <td scope='col'>$num</td>
                                     <td scope='col'>{$row['title']}</td>
                                     <td scope='col'><img src='./assets/img/{$row['image']}'' style ='width: 130px; height: auto;'></td>
-                                    <td scope='col'><input type='text' value='{$_SESSION['cart'][$row['product_id']]}' name='quantity[{$row['product_id']}]' size='2' style ='text-align: center;'></td>
-                                    <td scope='col'>$total_product</td>
+                                    <td scope='col'><input min='1' type='number' value='{$_SESSION['cart'][$row['product_id']]}' name='quantity[{$row['product_id']}]' size='2' style ='text-align: center;'></td>
+                                    <td scope='col'>$total_product$</td>
                                     <td scope='col'><a href='cart.php?action=delete&id={$row['product_id']}' style='color:#72af5c;'><i class='fa-solid fa-trash'></i></a></td>
                                 </tr>
                                 ";
@@ -113,7 +113,7 @@ if (!empty($_SESSION['cart'])) {
                                 <td scope='col'>Tổng tiền</td>
                                 <td scope='col'>&nbsp;</td>
                                 <td scope='col'>&nbsp;</td>
-                                <td scope='col'>$total</td>
+                                <td scope='col'>$total$</td>
                                 <td scope='col'>&nbsp;</td>
                             </tr>
                             ";

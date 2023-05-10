@@ -43,7 +43,7 @@
             </div>
             <div class="col p-0">
                 <?php
-                include "thongke.php";
+                include "index.php";
                 ?>
             </div>
         </div>
