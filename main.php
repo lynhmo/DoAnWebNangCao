@@ -28,14 +28,10 @@
             </div>
             <div class="body_bot-deal-child">
                 <?php
-                // include("dbConnection.php");
-                // $dbConnection = new dbConnection();
-                // $conn = $dbConnection->getConnection();
-
-                $sql = "SELECT * FROM products WHERE type = 'ưu đãi' order by product_id desc limit 4;";
+                $sql = "SELECT * FROM products WHERE price < oldprice order by price asc limit 4;";
                 $query = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($query) == 0) {
-                    echo "Hiện chúng tôi không có ưu đãi cho sản phẩm nào :>>";
+                    echo "Hiện chúng tôi không có ưu đãi cho sản phẩm nào T_T";
                 } else {
                     while ($data = mysqli_fetch_assoc($query)) {
                         echo "
