@@ -130,7 +130,7 @@ if (!empty($_SESSION['cart'])) {
             ?>
             <div class="info__order">
                 <input class="info_order__input" name="name__user" type="text" placeholder="Tên người nhận"><br>
-                <input class="info_order__input" name="phone__number" type="text" placeholder="Số điện thoại"> <br>
+                <input class="info_order__input" name="phone__number" type="text" placeholder="Số điện thoại" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" maxlength="10" minlength="10"> <br>
                 <input class="info_order__input" name="address" type="text" placeholder="Địa chỉ"> <br>
                 <textarea class="info_order__input" name="note" id="" cols="30" rows="10" placeholder="Ghi Chú"></textarea>
             </div>
