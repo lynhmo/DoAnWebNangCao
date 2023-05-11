@@ -1,10 +1,14 @@
 <?php
 include "header.php";
-
 if (isset($_POST["submit"])) {
     $password = $_POST['password'];
     $sql = "UPDATE users SET password = '$password' WHERE user_id = '{$_SESSION['user_id']}'";
     $query = mysqli_query($conn, $sql);
+    if ($query) {
+        echo "<script>alert('Đổi mật khẩu thành công!');</script>";
+    } else {
+        echo "<script>alert('Đổi mật khẩu thất bại!');</script>";
+    }
 }
 ?>
 <style>
