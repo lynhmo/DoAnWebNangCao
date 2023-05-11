@@ -9,6 +9,9 @@
             <div class="container__title__item">
                 <a href="./order_info.php" class="container__profile__title">Giỏ hàng của bạn</a>
             </div>
+            <div class="container__title__item">
+                <a href="changepass.php" class="container__profile__title">Đổi mật khẩu</a>
+            </div>
         </div>
         <table class='table table-hover table__profile'>
             <thead>

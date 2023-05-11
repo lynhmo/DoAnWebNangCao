@@ -199,7 +199,12 @@
                 <p class="body_mid-describe-item">Giống như nhiều người tiên phong, tác phẩm của van Gogh không được đánh giá đầy đủ trong suốt cuộc đời của ông,
                     nhưng di sản quan trọng và lâu dài của ông có nghĩa là ông vẫn truyền cảm hứng cho các nghệ sĩ nhiều thế hệ sau này.</p>
                 <span class="body_mid-describe-buy"><i class="fa-regular fa-heart"></i></span>
-                <span class="body_mid-describe-buy">Mua với 165$</span>
+                <!-- <span class="body_mid-describe-buy">
+                    <a href="http://localhost/STUDYDOC/admin_botstore/order_detail.php?id=43">
+                        Mua với 165$
+                    </a>
+                </span> -->
+                <a class="body_mid-describe-buy text-decoration-none" href="http://localhost/STUDYDOC/admin_botstore/order_detail.php?id=43">Mua với 165$</a>
             </div>
         </div>
     </div>

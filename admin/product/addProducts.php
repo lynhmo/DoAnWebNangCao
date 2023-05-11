@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../../permission.php";
+// include "../../permission.php";
 include '../../dbConnection.php';
 include "../header.php";
 $dbConnection = new dbConnection();

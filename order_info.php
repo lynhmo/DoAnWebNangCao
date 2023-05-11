@@ -8,6 +8,9 @@
             <div class="container__title__item">
                 <a href="./order_info.php" class="container__profile__title">Đơn hàng của bạn</a>
             </div>
+            <div class="container__title__item">
+                <a href="changepass.php" class="container__profile__title">Đổi mật khẩu</a>
+            </div>
         </div>
         <div class="info__order__table">
             <table class="table table-striped table-bordered border border-2">
