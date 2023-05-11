@@ -36,8 +36,8 @@ if (isset($_SESSION['total_money'])) {
 $orderInfo = "Thanh toán qua MoMo";
 $amount = $total_money * 23500; // Mac dinh gia tien test. De tranh bi loi
 $orderId = time() . "";
-$redirectUrl = "http://localhost/STUDYDOC/admin_botstore/admin/checkout_momo/return_momo.php"; // dieu huong sau khi thanh toan xong
-$ipnUrl = "http://localhost/STUDYDOC/admin_botstore/admin/checkout_momo/return_momo.php"; // URL này là nơi trả về các giá trị của thanh toán
+$redirectUrl = "http://localhost/Doanwebnangcao/admin/checkout_momo/return_momo.php"; // dieu huong sau khi thanh toan xong
+$ipnUrl = "http://localhost/Doanwebnangcao/admin/checkout_momo/return_momo.php"; // URL này là nơi trả về các giá trị của thanh toán
 $extraData = "";
 // 
 
