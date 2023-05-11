@@ -11,7 +11,6 @@
 if(isset($_REQUEST['id']) and $_REQUEST['id']!=""){
     // Include file config.php
     $id=$_GET['id'];
-    echo"id ===== $id";
     // Chuẩn bị câu lệnh delete
     include("dbConnection.php");
     $dbConnection = new dbConnection();
