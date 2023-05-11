@@ -10,7 +10,7 @@ $sql = "SELECT DATE(updatedate) AS ngay, SUM(total_money) AS tongtien
             LIMIT 30;";
 // Thực hiện truy vấn data thông qua hàm mysqli_query
 $query = mysqli_query($conn, $sql);
-$data = array(array('DATE', 'TOTAL_MONEY'));
+$data = array(array('DATE', 'TOTAL MONEY'));
 while ($row = mysqli_fetch_assoc($query)) {
     $data[] = array($row['ngay'], (int) $row['tongtien']);
 }
