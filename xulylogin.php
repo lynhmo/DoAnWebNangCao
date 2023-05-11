@@ -6,7 +6,6 @@ $_SESSION["email"] = null;
 $_SESSION["fullname"] = null;
 $_SESSION["is_block"] = null;
 $_SESSION["permision"] = null;
-// $_SESSION["sessionid"] = null;
 
 include("dbConnection.php");
 $dbConnection = new dbConnection();

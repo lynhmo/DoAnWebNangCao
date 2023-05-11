@@ -6,7 +6,6 @@ $id = -1;
 if (isset($_GET["id"])) {
 	$id = intval($_GET['id']);
 }
-// $id = $_GETp['id'];
 
 $sql = "select * from posts where posts_id = '$id'";
 $query = mysqli_query($conn, $sql);

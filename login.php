@@ -23,9 +23,6 @@
         </div>
         <div class="body_right">
             <div>
-                <!-- <div class="btn__admin">
-                    <a href="adlogin.php" class="btn__admin__login">Admin</a>
-                </div> -->
                 <form method="POST" action="login.php">
                     <div class="form__input">
                         <input type="text" name="username" placeholder="Tên Tài Khoản" class="body_right-inputlogin">

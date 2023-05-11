@@ -1,7 +1,4 @@
 <?php
-    // include("dbConnection.php");
-    // $dbConnection = new dbConnection();
-    // $conn = $dbConnection->getConnection();
     include("header.php");
 	$id = -1;
 	if (isset($_GET["id"])) {
