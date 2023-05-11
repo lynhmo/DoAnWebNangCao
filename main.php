@@ -77,8 +77,15 @@
                 </div>
                 <div class="body_bot-ratings">
                     <?php
-                    $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
-
+                    // $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
+                    //Lay ra san pham duoc mua nhieu nhat
+                    $sql = "SELECT products.* 
+                            FROM detail_checkout,products
+                            WHERE detail_checkout.product_id = products.product_id
+                            GROUP BY product_id
+                            order by SUM(quantity_product)
+                            desc
+                            limit 4;";
                     $query = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($query) == 0) {
                         echo "Hiện chúng tôi không có sản phẩm nào";

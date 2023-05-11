@@ -53,9 +53,11 @@
     <br>
     <div class="container">
         <ul class="pagination" style="display: flex;justify-content: center;margin-top: -50px">
+            <?php $current_page = isset($_GET['trang']) ? (int) $_GET['trang'] : 1; //toan tu 3 ngoi de lay ra trang hien tai
+            ?>
             <?php for ($i = 1; $i <= $so_trang; $i++) { ?>
                 <li style="height: 20px;">
-                    <a href="?trang=<?php echo $i ?>">
+                    <a href="?trang=<?php echo $i ?>" <?php if ($i == $current_page) echo 'class="active"' ?>>
                         <?php echo $i ?>
                     </a>
                 </li>
@@ -63,5 +65,10 @@
         </ul>
     </div>
 </div>
-
+<style>
+    .active {
+        background-color: #397224;
+        color: white;
+    }
+</style>
 <?php include "./footer.php" ?>
