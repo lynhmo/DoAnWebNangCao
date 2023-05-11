@@ -93,7 +93,6 @@ session_start();
                         include("./dbConnection.php");
                         $dbConnection = new dbConnection();
                         $conn = $dbConnection->getConnection();
-                        // $cookie_check = str_replace("PHPSESSID=", "", $_SERVER["HTTP_COOKIE"]);
                         if ($_SESSION['user_id'] == NULL) {
                             echo "
                                         <a href='login.php' class='login_cart-item-link'>
@@ -129,35 +128,6 @@ session_start();
                                 </a>
                                 ";
                         }
-                        // elseif ($_SESSION['user_id'] != NULL && $_SESSION["sessionid"] == '') {
-                        //     echo "
-                        //             <a href='profile.php?id={$_SESSION['user_id']}' class='login_cart-item-link'>
-                        //                 <div class='login-cart_item'>
-                        //                     <i class='fa-solid fa-user'></i>
-                        //                 </div>
-                        //             </a>
-                        //         ";
-                        //     echo "<span class='login__usersname'>Hi, {$_SESSION['fullname']}</span>";
-                        // }
-                        // elseif ($_SESSION['user_id'] != NULL && $_SESSION["sessionid"] == $cookie_check){
-                        //     echo "
-                        //             <a href='profile.php?id={$_SESSION['user_id']}' class='login_cart-item-link'>
-                        //                 <div class='login-cart_item'>
-                        //                     <i class='fa-solid fa-user'></i>
-                        //                 </div>
-                        //             </a>
-                        //         ";
-                        //     echo "<span class='login__usersname'>Welcome back {$_SESSION['fullname']}</span>";
-                        // }
-                        // else{
-                        //     echo "
-                        //     <a href='login.php' class='login_cart-item-link'>
-                        //         <div class='login-cart_item'>
-                        //             <i class='fa-solid fa-user'></i>
-                        //         </div>
-                        //     </a>
-                        //     ";
-                        // }
                         ?>
                     </div>
                     <div class="login__cart__logout-item cart">

@@ -3,7 +3,6 @@ include("header.php") ?>
 <div class='container_search'>
     <?php
     if (isset($_REQUEST['ok'])) {
-        // $search = addslashes($_GET['search']);
         $search = $_GET['search'];
         if (empty($search)) 
         {

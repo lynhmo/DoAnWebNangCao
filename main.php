@@ -77,7 +77,6 @@
                 </div>
                 <div class="body_bot-ratings">
                     <?php
-                    // $sql = "SELECT * FROM products WHERE type = 'top sản phẩm' order by product_id desc limit 4;";
                     //Lay ra san pham duoc mua nhieu nhat
                     $sql = "SELECT products.* 
                             FROM detail_checkout,products

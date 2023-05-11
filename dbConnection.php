@@ -6,11 +6,6 @@ class dbConnection
     private $password = "1024";
     private $dbname = "botstore_final";
 
-    // private $servername = "host188.vietnix.vn";
-    // private $username = "botstore";
-    // private $password = "[0R8sdG8Zj0X!u";
-    // private $dbname = "botstore_MainData";
-
     public function __construct()
     {
     }
