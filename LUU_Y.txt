@@ -1,0 +1,14 @@
+Khi sử dụng thanh toán momo thì phải thay đổi đường dẫn trả về giá trị trong file admin_botstore\admin\checkout_momo\checkout_momo.php
+Thay đổi 2 dòng(43, 46):
+
+// Dieu huong sau khi thanh toan xong
+$redirectUrl = "http://localhost/STUDYDOC/admin_botstore/admin/checkout_momo/return_momo.php";
+// 
+// URL này là nơi trả về các giá trị của thanh toán
+$ipnUrl = "http://localhost/STUDYDOC/admin_botstore/admin/checkout_momo/return_momo.php";
+
+admin_botstore là file ROOT
+chỉ cần thay gia trị đằng sau từ admin_botstore trở đi
+
+Web sử dụng XAMPP để host web localhost cho nên giá trị trả về mỗi máy sẽ bị khác đường dẫn
+Trong kịch bản chạy trên host thì đường dẫn sẽ trả về trên server chứ không cần sửa lại theo từng người dùng khác nhau
