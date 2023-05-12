@@ -1,6 +1,18 @@
 LƯU Ý KHI SỬ DỤNG
 =================
 
+--------
+Tài khoản ADMIN: 
+admin
+admin123
+--------
+Thong tin thanh toan the MOMO
+NGUYEN VAN A
+9704 0000 0000 0018
+03/07	
+OTP
+--------
+
 Lưu ý 1:
 Khi sử dụng thanh toán momo thì phải thay đổi đường dẫn trả về giá trị trong file admin_botstore\admin\checkout_momo\checkout_momo.php
 Thay đổi 2 dòng(43, 46):
