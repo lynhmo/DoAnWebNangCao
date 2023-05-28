@@ -1,8 +1,7 @@
 <?php
-// session_start(); 
 include "./header.php";
-// include "./permission.php";
 
+// Button sử dụng btn_submit sẽ up bài thường
 if (isset($_POST["btn_submit"])) {
 	//lấy thông tin từ các form bằng phương thức POST
 	$title = $_POST["title"];
@@ -19,6 +18,8 @@ if (isset($_POST["btn_submit"])) {
 	mysqli_query($conn, $sql);
 	echo '<script language="javascript">alert("Đăng bài thành công!"); window.location="posts.php";</script>';
 }
+
+// Button sử dụng photoUp sẽ up bài với ảnh
 if (isset($_POST['photoUp'])) {
 	//
 	$title = $_POST["title"];
@@ -97,6 +98,6 @@ if (isset($_POST['photoUp'])) {
 	</div>
 </body>
 <script>
-	CKEDITOR.replace('post_content');
+	CKEDITOR.replace('post_content'); // CKEDITOR
 </script>
 <?php include "./footer.php" ?>
