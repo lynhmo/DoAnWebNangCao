@@ -12,7 +12,7 @@ $vnp_TmnCode = "WAVHY2N6"; //Website ID in VNPAY System
 $vnp_HashSecret = "RDDUIQQZHQNCVPGLVWNAQLEVDHHLGUAC"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 //
-$vnp_Returnurl = "http://localhost/STUDYDOC/WebNC-php-TEST/admin/checkout_vnpay/vnpay_return.php";
+$vnp_Returnurl = "http://localhost/STUDYDOC/admin_botstore/admin/checkout_vnpay/vnpay_return.php";
 //
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 //Config input format
@@ -98,21 +98,6 @@ if (isset($_POST['redirect'])) {
     }
     // SQL
     $_SESSION['code_cart'] = $code_order;
-    // $customer_id = $_SESSION['id'];
-    // $status = 0;
-    // $sql = "insert into orders(customer_id, name_receiver, phone_receiver, address_receiver, status, total_price,cart_payment)
-    // values ('$customer_id', '$name_receiver', '$phone_number_receiver', '$address_receiver', '$status', '$total','$checkout')";
-    // mysqli_query($connect, $sql);
-    // $sql = "select max(id) from orders where customer_id = '$customer_id'";
-    // $result = mysqli_query($connect, $sql);
-    // $order_id = mysqli_fetch_array($result)['max(id)'];
-    // foreach ($cart as $product_id => $each) {
-    //     $quantity = $each['so_luong'];
-    //     $sql = "insert into order_product(order_id,product_id,quantity) values('$order_id','$product_id','$quantity')";
-    //     mysqli_query($connect, $sql);
-    // }
-    // mysqli_close($connect);
-    // unset($_SESSION['cart']);
     header('Location: ' . $vnp_Url);
     die();
 } else {

@@ -51,8 +51,9 @@ if (isset($_GET["id"])) {
                 <div class="form-group mb-3" style="width: 300px;">
                     <label style="font-size: 18px">NGÂN HÀNG</label>
                     <select name="bank_code" id="bank_code" class="form-select">
-                        <option value="VNBANK">Không chọn</option>
+                        <option value="VNBANK">VNBANK</option>
                         <option value="">Không chọn</option>
+                        <option value="INTCARD">The quoc te</option>
                         <option value="NCB"> Ngan hang NCB</option>
                         <option value="VISA"> Thanh toan qua VISA/MASTER</option>
                         <option value="AGRIBANK"> Ngan hang Agribank</option>

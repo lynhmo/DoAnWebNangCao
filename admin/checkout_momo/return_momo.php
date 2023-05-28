@@ -114,7 +114,7 @@ partnerCode=MOMOBKUN20180529
         <?php
         unset($_SESSION['cart']);
         header("Refresh: 5; URL=../../order_info.php");
-        echo "Bạn sẽ được chuyển hướng sau <p id='countdown'></p>. Nếu không hãy bấm  .";
+        echo "Bạn sẽ được chuyển hướng sau <span id='countdown'></span>. Nếu không hãy bấm  .";
         ?>
         <a href="../../order_info.php"><button class="btn btn-success mb-3">QUAY LẠI</button></a>
     </div>
