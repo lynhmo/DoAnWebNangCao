@@ -1,7 +1,6 @@
 <?php
 // session_start(); 
 include "./header.php";
-// include "./permission.php";
 
 if (isset($_POST["btn_submit"])) {
 	//lấy thông tin từ các form bằng phương thức POST

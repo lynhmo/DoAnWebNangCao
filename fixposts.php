@@ -1,7 +1,6 @@
 <?php
 // session_start(); 
 include "./header.php";
-include "./permission.php";
 $id = -1;
 if (isset($_GET["id"])) {
 	$id = intval($_GET['id']);

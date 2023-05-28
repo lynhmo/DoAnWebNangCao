@@ -9,7 +9,7 @@ if (isset($_GET['action'])) {
     {
         foreach ($_POST['quantity'] as $id => $quantity) {
             if ($quantity == 0) {
-                unset($_SESSION['cart'][$id]);
+                unset($_SESSION['cart'][$id]); 
             } else {
                 if ($add) {
                     $_SESSION['cart'][$id] += $quantity;
@@ -21,8 +21,8 @@ if (isset($_GET['action'])) {
     }
     switch ($_GET['action']) {
         case "add":
-            foreach ($_POST['quantity'] as $id => $quantity) {
-                $_SESSION['cart'][$id] = $quantity;
+            foreach ($_POST['quantity'] as $id => $quantity) {//  lay so luong theo id
+                $_SESSION['cart'][$id] = $quantity;// luu vao session cart
             }
             break;
         case "delete":
@@ -34,6 +34,8 @@ if (isset($_GET['action'])) {
             if (isset($_POST['update__totalmoney'])) {
                 update_cart();
             } elseif (isset($_POST['btn__order'])) {
+                // var_dump($_POST['phone__number']);
+                // exit;
                 if (empty($_POST['name__user']) or empty($_POST['phone__number']) or empty($_POST['address'])) {
                     $error = "Bạn cần nhập đầy đủ thông tin người mua";
                 }
