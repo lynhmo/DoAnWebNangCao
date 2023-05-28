@@ -19,7 +19,6 @@
         $sql_query= mysqli_query($conn,$sql);
 		// thực thi câu $sql với biến conn lấy từ file connection.php
 		echo '<script language="javascript">alert("Sửa thông tin thành viên thành công!"); window.location="dashboard-fix.php";</script>';
-		// header('Location: dashboard-fix.php');
 	}
 
 	$id = -1;

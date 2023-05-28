@@ -90,7 +90,6 @@ $data = mysqli_fetch_assoc($query);
                 <tr>
                     <td>Hãng sản xuất</td>
                     <td>
-                        <!-- <input type="option" name="star" class="w-25" require> -->
                         <select id="brand" require name="trademark" class="p-2">
                             <option value="1">Lego</option>
                             <option value="2">Shoppe</option>
