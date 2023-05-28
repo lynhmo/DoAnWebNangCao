@@ -9,7 +9,7 @@ if (isset($_GET['action'])) {
     {
         foreach ($_POST['quantity'] as $id => $quantity) {
             if ($quantity == 0) {
-                unset($_SESSION['cart'][$id]); 
+                unset($_SESSION['cart'][$id]);
             } else {
                 if ($add) {
                     $_SESSION['cart'][$id] += $quantity;
@@ -21,8 +21,8 @@ if (isset($_GET['action'])) {
     }
     switch ($_GET['action']) {
         case "add":
-            foreach ($_POST['quantity'] as $id => $quantity) {//  lay so luong theo id
-                $_SESSION['cart'][$id] = $quantity;// luu vao session cart
+            foreach ($_POST['quantity'] as $id => $quantity) { //  lay so luong theo id
+                $_SESSION['cart'][$id] = $quantity; // luu vao session cart
             }
             break;
         case "delete":
