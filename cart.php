@@ -59,6 +59,7 @@ if (isset($_GET['action'])) {
                     $insert_order_detail =  mysqli_query($conn, "INSERT INTO detail_checkout (checkout_id, product_id, quantity_product, price, createdate, updatedate) VALUES " . $insertString . ";");
                     echo '<script language="javascript">alert("Đặt Hàng Thành Công!");</script>';
                     unset($_SESSION['cart']);
+                    echo '<script language="javascript">window.location = "order_info.php";</script>';
                 }
             }
             break;

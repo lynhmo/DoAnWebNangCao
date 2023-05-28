@@ -2,28 +2,25 @@
 $sql_so_san_pham = "select count(*) from products";
 $arr_so_san_pham = mysqli_query($conn, $sql_so_san_pham);
 $ket_qua = mysqli_fetch_array($arr_so_san_pham);
-$so_san_pham = $ket_qua['count(*)'];
+$so_san_pham = $ket_qua['count(*)']; // Lấy ra tổng số sản phẩm
 $so_san_pham_mot_trang = 12;
-$so_trang = ceil($so_san_pham / $so_san_pham_mot_trang);
+$so_trang = ceil($so_san_pham / $so_san_pham_mot_trang); // làm tròn lên 1.2 thành 2
 $trang = "";
+// Mỗi 1 lần bấm nút chuyển trang mới sẽ có 1 giá tri trang mới được gửi từ ALL PRODUCT
 if (isset($_GET['trang'])) {
     $trang = $_GET['trang'];
 } else {
-    $trang = 1;
+    $trang = 1; // mac dinh la 1
 }
 $bo_qua = $so_san_pham_mot_trang * ($trang - 1);
 
-$start = $end = "";
-if (isset($_POST['start']) && isset($_POST['end'])) {
-    $start = $_POST['start'];
-    $end = $_POST['end'];
-    $sql1 = "select * from products";
-} else {
-    $sql1 = "select * from products limit $so_san_pham_mot_trang offset $bo_qua";
-}
+$sql1 = "select * from products limit $so_san_pham_mot_trang offset $bo_qua";
+// Sử dụng offset để bỏ qua các sản phẩm đã được lấy ra ở trang trước
+// Nếu trang trước là 2 thì 12*2 sản phẩm đầu tiên trong table sẽ bị bỏ qua và lấy 12 sản phẩm tiếp theo
 $result = mysqli_query($conn, $sql1);
-//
+
 ?>
+<!-- Lặp lại đủ số product trong 1 trang -->
 <?php foreach ($result as $data) : ?>
     <div class="products products_recommend col mx-4 mb-4">
         <a href='order_detail.php?id=<?php echo $data['product_id'] ?>'>

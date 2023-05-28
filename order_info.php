@@ -51,7 +51,7 @@
                                 ||
                                 <a href='admin/checkout_momo/confirm_momo.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'> MOMO</a>
                                 ||
-                                <a href='#' style='text-decoration: none; color: #397224;'> COD</a>
+                                <a href='admin/COD/process_COD.php?id={$row['checkout_id']}' style='text-decoration: none; color: #397224;'> COD</a>
                             </td>";
                         } else {
                             echo "  
