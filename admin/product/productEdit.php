@@ -1,7 +1,5 @@
 <?php
 session_start();
-// include "./header.php";
-include "../../permission.php";
 include '../../dbConnection.php';
 $dbConnection = new dbConnection();
 $conn = $dbConnection->getConnection();
@@ -102,13 +100,14 @@ $data = mysqli_fetch_assoc($query);
                     <td>Ảnh (only png, jpeg or jpg)</td>
                     <td>
                         <input type="hidden" name="size" value="1000000">
-                        <input type="file" name="image" class="hinhanh" require value="../../assets/img/<?php echo $data['type'] ?>"><br /><br />
+                        <input type="file" name="image" class="hinhanh" require id="imgUp" value="../../assets/img/<?php echo $data['type'] ?>"><br /><br />
+
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="submit" name="btn_edit" value="Save" class="btn btn-secondary" />
-                        <input type="submit" name="btn_edit_normal" value="Save No Image" class="btn btn-secondary" />
+                        <input type="submit" name="btn_edit" value="Save (Phải có ảnh)" class="btn btn-secondary" />
+                        <input type="submit" name="btn_edit_normal" value="Save (Nếu không chọn ảnh)" class="btn btn-secondary" />
                     </td>
                 </tr>
             </table>
