@@ -1,3 +1,15 @@
+<?php
+session_start();
+include("../../dbConnection.php");
+$dbConnection = new dbConnection();
+$conn = $dbConnection->getConnection();
+$id = -1;
+if (isset($_GET["id"])) {
+    $id = intval($_GET['id']);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +20,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MOMO RESPONSE</title>
+    <title>COD RESPONSE</title>
     <!-- Bootstrap core CSS -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -22,78 +34,30 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<!--
-EXAMPLE RETURN CODE
-partnerCode=MOMOBKUN20180529
-&orderId=1683733321
-&requestId=1683733321
-&amount=7050000
-&orderInfo=1683733321
-&orderType=momo_wallet
-&transId=2975564894
-&payType=napas
-&signature=85e0720ca922927f835323f9c23edc6704469d979342bdda1c18f89b80f561ae 
--->
 
 <body>
-
-    <?php
-    session_start();
-    include("../../dbConnection.php");
-    $dbConnection = new dbConnection();
-    $conn = $dbConnection->getConnection();
-
-
-
-    if (isset($_GET['partnerCode'])) {
-        // Lấy data ra từ return của momo
-        $partnerCode = $_GET['partnerCode'];
-        $orderId = $_GET['orderId'];
-        $requestId = $_GET['requestId'];
-        $amount = $_GET['amount'];
-        $orderInfo = $_GET['orderInfo'];
-        $orderType = $_GET['orderType'];
-        $transId = $_GET['transId'];
-        $payType = $_GET['payType'];
-        $signature = $_GET['signature'];
-
-        $sql = "INSERT INTO momo(partnerCode, orderId, requestId, amount, orderInfo, orderType, transId, payType, signature) VALUES ('$partnerCode','$orderId','$requestId','$amount','$orderInfo','$orderType','$transId','$payType','$signature')";
-        $result = mysqli_query($conn, $sql);
-        // luu vao database
-    }
-
-    ?>
     <div class="container" style="margin-top: 50px;background-color: #f6f7fb;border-radius: 10px;">
         <div class="header clearfix">
-            <h3 class="text-muted">MOMO RESPONSE</h3>
+            <h3 class="text-muted">COD RESPONSE</h3>
         </div>
         <div class="table-responsive">
             <div class="form-group">
                 <label>Mã đơn hàng:</label>
 
-                <label><?php echo $_GET['partnerCode'] ?></label>
+                <label><?php echo $_GET['id'] ?></label>
             </div>
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo $_GET['amount']  ?></label>
-            </div>
-            <div class="form-group">
-                <label>Nội dung thanh toán:</label>
-                <label><?php echo $_GET['orderInfo'] ?></label>
+                <label><?php echo $_SESSION['id_thanhtoan'] * 23500 ?></label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>
                 <label>
                     <?php
-                    if ($_GET['resultCode'] == '0') {
-                        mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
-                        echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
-                    } else {
-                        echo "<span style='color:red'>Thanh Toán Không Thành Công</span>";
-                    }
+                    mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
+                    echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
                     ?>
-
                 </label>
             </div>
         </div>
@@ -111,7 +75,7 @@ partnerCode=MOMOBKUN20180529
         var seconds = 5;
         var countdown = setInterval(function() {
             var countdownElement = document.getElementById("countdown");
-            countdownElement.innerHTML = seconds + " seconds remaining...";
+            countdownElement.innerHTML = seconds + " giây còn lại...";
             seconds--;
         }, 1000);
     </script>
