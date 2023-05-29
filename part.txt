@@ -1,0 +1,38 @@
+Linh
+====
+admin/momo
+admin/vnpay
+admin/COD
+admin/product
+admin/home
+admin/header
+AllProduct
+product_block
+addpost-ck
+footer
+main
+order_info
+############
+
+Long
+====
+admin/order
+admin/user
+admin/index
+addpost-ck
+cart
+changepass
+delpost
+fixpost-> update_post
+header
+login/logout/register --> xuly_login//register
+main
+order_detail (product_detail)
+order_detail_product
+orderinfo
+post
+postxuly
+profile
+search
+showpost
+

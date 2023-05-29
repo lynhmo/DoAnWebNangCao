@@ -147,7 +147,7 @@ if (!empty($_SESSION['cart'])) {
                         echo '<script language="javascript">window.location.replace("checkout.php");</script>';
                     }
                 }
-                ?> -->
+                ?>
             </div>
         </form>
     </div>
