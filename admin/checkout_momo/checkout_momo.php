@@ -28,6 +28,7 @@ $partnerCode = 'MOMOBKUN20180529';
 $accessKey = 'klm05TvNBzhg7h7j';
 $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 //
+//Lay ra tong tiền
 $total_money = 0;
 if (isset($_SESSION['total_money'])) {
     $total_money = $_SESSION['total_money'];

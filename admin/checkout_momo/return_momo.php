@@ -87,7 +87,7 @@ partnerCode=MOMOBKUN20180529
                 <label>
                     <?php
                     if ($_GET['resultCode'] == '0') {
-                        mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
+                        mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$id}';");
                         echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
                     } else {
                         echo "<span style='color:red'>Thanh Toán Không Thành Công</span>";

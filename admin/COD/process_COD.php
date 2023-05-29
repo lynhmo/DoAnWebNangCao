@@ -49,13 +49,21 @@ if (isset($_GET["id"])) {
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo $_SESSION['id_thanhtoan'] * 23500 ?></label>
+                <label>
+                    <?php
+                    $sql = "SELECT total_money FROM checkout WHERE checkout_id = $id";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_array($result);
+                    $vnd = $row['total_money'] * 23500;
+                    echo  $vnd . " VND";
+                    ?>
+                </label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>
                 <label>
                     <?php
-                    mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
+                    mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$id}';");
                     echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
                     ?>
                 </label>
