@@ -34,8 +34,6 @@ if (isset($_GET['action'])) {
             if (isset($_POST['update__totalmoney'])) {
                 update_cart();
             } elseif (isset($_POST['btn__order'])) {
-                // var_dump($_POST['phone__number']);
-                // exit;
                 if (empty($_POST['name__user']) or empty($_POST['phone__number']) or empty($_POST['address'])) {
                     $error = "Bạn cần nhập đầy đủ thông tin người mua";
                 }
@@ -140,10 +138,6 @@ if (!empty($_SESSION['cart'])) {
             <div class="text-center">
                 <input type="submit" name="update__totalmoney" value="Cập nhật" class="btn__submit__money-order">
                 <input type="submit" name="btn__order" value="Đặt hàng" class="btn__submit__money-order">
-                <!-- <form action="cart.php" method="post">
-                     <input type="hidden" name="send"> 
-                    <input type="submit" name="vnpay" class="btn__submit__money-order" value="Thanh toan VNPAY">
-                </form>
                 <?php
                 if (isset($_POST['vnpay'])) {
                     if ($total == 0) {
@@ -153,7 +147,7 @@ if (!empty($_SESSION['cart'])) {
                         echo '<script language="javascript">window.location.replace("checkout.php");</script>';
                     }
                 }
-                ?> -->
+                ?>
             </div>
         </form>
     </div>

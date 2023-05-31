@@ -45,9 +45,6 @@ $query = mysqli_query($conn, $sql);
                         <td>Xem bài viết</td>
                     </tr>
                     <?php
-                    // include './dbConnection.php';
-                    // $dbConnection = new dbConnection();
-                    // $conn = $dbConnection->getConnection();
                     $sql = "SELECT * FROM posts WHERE posts_id";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_array($result)) {

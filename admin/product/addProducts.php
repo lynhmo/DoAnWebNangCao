@@ -1,6 +1,5 @@
 <?php
 session_start();
-// include "../../permission.php";
 include '../../dbConnection.php';
 include "../header.php";
 $dbConnection = new dbConnection();
@@ -44,7 +43,6 @@ $conn = $dbConnection->getConnection();
             <tr>
                 <td>Hãng sản xuất</td>
                 <td>
-                    <!-- <input type="option" name="star" class="w-25" require> -->
                     <select id="brand" require name="trademark" class="p-2">
                         <option value="1">Lego</option>
                         <option value="2">Shoppe</option>
@@ -62,10 +60,12 @@ $conn = $dbConnection->getConnection();
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" name="btn_submit" value="Thêm sản phẩm" class="btn btn-secondary" /></td>
+                <!-- Submit form -->
             </tr>
         </table>
     </form>
-    <?php require '../../admin/product/productProcess.php'; ?>
+    <?php require '../../admin/product/productProcess.php'; //Link các hàm lại
+    ?>
     <div class="w-100">
         <div class="noidung m-5">
             <table class="table table-striped table-bordered border border-2">

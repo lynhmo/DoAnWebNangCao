@@ -48,7 +48,8 @@ if (isset($_GET["id"])) {
                         $sql = "SELECT total_money FROM checkout WHERE checkout_id = $id";
                         $result = mysqli_query($conn, $sql);
                         $row = mysqli_fetch_array($result);
-                        echo $row['total_money'] . "$";
+                        $vnd = $row['total_money'] * 23500;
+                        echo  $vnd . " VND";
                         ?>
                     </div>
                 </div>

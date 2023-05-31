@@ -4,8 +4,8 @@ class dbConnection
     // Đổi tên database và pass
     private $servername = "127.0.0.1:3306";
     private $username = "root";
-    private $password = "eldl";
-    private $dbname = "botstore_test";
+    private $password = "1024";
+    private $dbname = "botstore_final";
 
     // private $servername = "host188.vietnix.vn";
     // private $username = "botstore";

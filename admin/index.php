@@ -2,6 +2,7 @@
 include("../dbConnection.php");
 $dbConnection = new dbConnection();
 $conn = $dbConnection->getConnection();
+//lay ra 2 truong du lieu (ngay,tong tien)
 $sql = "SELECT DATE(updatedate) AS ngay, SUM(total_money) AS tongtien
             FROM checkout
             GROUP BY ngay

@@ -49,13 +49,21 @@ if (isset($_GET["id"])) {
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo $_SESSION['id_thanhtoan'] * 23500 ?></label>
+                <label>
+                    <?php
+                    $sql = "SELECT total_money FROM checkout WHERE checkout_id = $id";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_array($result);
+                    $vnd = $row['total_money'] * 23500; // menh gia tien
+                    echo  $vnd . " VND";
+                    ?>
+                </label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>
                 <label>
                     <?php
-                    mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$_SESSION['id_thanhtoan']}';");
+                    mysqli_query($conn, "UPDATE checkout SET status = '1' WHERE checkout_id = '{$id}';");
                     echo "<span style='color:Green; font-weight: bold;'>Thanh Toán Thành Công</span>";
                     ?>
                 </label>
@@ -67,7 +75,7 @@ if (isset($_GET["id"])) {
         <?php
         unset($_SESSION['cart']);
         header("Refresh: 5; URL=../../order_info.php");
-        echo "Bạn sẽ được chuyển hướng sau <span id='countdown'></span>. Nếu không hãy bấm  .";
+        echo "Bạn sẽ được chuyển hướng sau <span id='countdown'></span>. Nếu không hãy bấm  ";
         ?>
         <a href="../../order_info.php"><button class="btn btn-success mb-3">QUAY LẠI</button></a>
     </div>
