@@ -12,6 +12,11 @@ if (isset($_POST["submit"])) {
 }
 ?>
 <style>
+    .main_change{
+        width: fit-content;
+        height: auto;
+        margin: 150px auto
+    }
     .changepass {
         width: fit-content;
         height: auto;
@@ -53,8 +58,6 @@ if (isset($_POST["submit"])) {
     }
 </style>
 
-<body>
-    <div>
         <div class="container__profile">
             <div class="container__title">
                 <div class="container__title__item">
@@ -68,7 +71,7 @@ if (isset($_POST["submit"])) {
                 </div>
             </div>
             <div class="info__order__table">
-                <div class="cdhangepass">
+                <div class="main_change">
                     <form action="changepass.php" method="POST">
                         <div class="changepass">
                             <div class="input-group">
@@ -94,5 +97,4 @@ if (isset($_POST["submit"])) {
                 });
             </script>
         </div>
-</body>
 <?php include "footer.php" ?>
