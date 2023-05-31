@@ -45,7 +45,7 @@
             ?>
             <?php for ($i = 1; $i <= $so_trang; $i++) { ?>
                 <li style="height: 20px;">
-                    <a href="?trang=<?php echo $i ?>" <?php if ($i == $current_page) echo 'class="active"' ?>>
+                    <a href="?trang=<?php echo $i ?>" <?php if ($i == $current_page) echo 'class="active"' //check de to mau nut?>>
                         <?php echo $i ?>
                     </a>
                     <!-- Nếu $i == $current_page thì class="active" của thẻ <a> sẽ được tô màu-->
