@@ -14,6 +14,13 @@ $data = array(array('DATE', 'TOTAL MONEY'));
 while ($row = mysqli_fetch_assoc($query)) {
     $data[] = array($row['ngay'], (int) $row['tongtien']);
 }
+
+$sql1 = "SELECT SUM(total_money) AS total, DATE_FORMAT(updatedate, '%m-%Y') AS month
+FROM checkout
+WHERE DATE_FORMAT(updatedate, '%Y-%m') = DATE_FORMAT(CURDATE(), '%Y-%m');        
+";
+$query1 = mysqli_query($conn, $sql1);
+$data1 = mysqli_fetch_assoc($query1);
 ?>
 
 <script type="text/javascript">
@@ -41,6 +48,18 @@ while ($row = mysqli_fetch_assoc($query)) {
         chart.draw(data, options);
     }
 </script>
+
+<style>
+    .header__tt{
+        width: fit-content;
+        margin: 60px auto 20px;
+    }
+</style>
+<div class="header__tt">
+    Tổng tiền của tháng <?php echo $data1['month']; ?>: là <?php echo $data1['total']; ?> $
+
+</div>
+
 <div>
     <div id="curve_chart" style="width: 1200px; height: 500px"></div>
 
