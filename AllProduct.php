@@ -41,7 +41,8 @@
     <br>
     <div class="container">
         <ul class="pagination" style="display: flex;justify-content: center;margin-top: -50px">
-            <?php $current_page = isset($_GET['trang']) ? (int) $_GET['trang'] : 1; //toan tu 3 ngoi de lay ra trang hien tai 
+            <?php $current_page = isset($_GET['trang']) ? (int) $_GET['trang'] : 1; 
+            //toan tu 3 ngoi de lay ra trang hien tai. Neu ton tai isset thì lay ra con khong la 1
             ?>
             <?php for ($i = 1; $i <= $so_trang; $i++) { ?>
                 <li style="height: 20px;">
