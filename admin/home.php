@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <title>Document</title>
+    <title>ADMIN PAGE</title>
 </head>
 
 <body>
